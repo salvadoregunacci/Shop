@@ -1,0 +1,58 @@
+.nav_promo{
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    .container{
+        width: 1080px;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        height: 100%;
+        width: 500px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        color: $black;
+    }
+    .basket{
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid $black;
+        border-radius: 15px;
+        padding: 10px 15px 10px 15px;
+        width: 180px;
+        height: 30px;
+        &__image{
+            height: 35px;
+        }
+        &__iterator{
+            background-color: rgb(236, 104, 104);
+            border-radius: 100%;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            color: #fff;
+            left: 35px;
+            top: 3px;
+        }
+        span{
+            line-height: 30px;
+            font-size: 22px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 100%;
+            color: $black;
+            border-left: 1px solid $black;
+            text-transform: uppercase;
+        }
+    }
+}
