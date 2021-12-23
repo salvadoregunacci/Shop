@@ -1,13 +1,14 @@
 .products {
     display: flex;
-    height: 900px;
     background-color: $black;
-    
+    height: 2000px;
     .container {
         height: 100%;
         width: 1080px;
         background-color: #fff;
         margin-right: 50px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__header {
@@ -55,5 +56,9 @@
             transform: translateY(-50%);
             text-shadow: 2px 1px 15px rgba(0,0,0, .7);
         } 
+    }
+    &__row{
+        margin-top: 50px;
+        padding: 0 50px 0 50px;
     }
 }

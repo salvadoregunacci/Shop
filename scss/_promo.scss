@@ -3,19 +3,21 @@
     align-items: center;
     justify-content: space-around;
     height: 620px;      
-    position: relative;                                       
-    // padding-left: 80px;
-    // padding-right: 80px;
+    position: relative;            
+    background-color:   #ffffff;            
+    z-index: -2;                  
     &__bg_gradient{
         position: absolute;
-        background: linear-gradient(90deg, #8d8d8d,#ffffff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                              
-        height: 100%;
-        width: 400px;   
+        background: linear-gradient(90deg, #c52020,#ff751a);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                       
+        height: 1600px;
+        width: 900px;   
+        transform: rotate(-25deg);
         z-index: -1;  
-        left: 0;                                        
+        left: -230px;     
+        border-right: 3px solid #f16b18;    
+        box-shadow: inset 2px 2px 20px black;                               
     }
     &__info{
-        // margin-left: 100px;
         max-width: 700px;
     }
     &__image{
@@ -23,10 +25,14 @@
         width: 670px;
         img{
         height: 100%;
-        transform: translateX(-15%);
+        transform: translateX(-20%);
+        filter: drop-shadow(5px 5px 30px rgb(227, 250, 97));
         }
     }
     .benefits{
+        &__header{
+            margin-left: 25px;
+        }
         &__item{
             display: flex;
             margin-left: 10px;
@@ -38,12 +44,13 @@
             }
             .benefits__delivery{
                 height: 45px;
+                margin-left: 30px;
             }
             .benefits__price{
-                padding-left: 20px;
+                margin-left: 90px;
             }
             .benefits__garanty{
-                padding-left: 20px;
+                margin-left: 140px;
             }
             p{
                 margin-left: 50px;
