@@ -17,3 +17,11 @@ body{
     width: 1200px;
     margin: 0 auto;
 }
+::-webkit-scrollbar{
+    background-color: orange;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: -webkit-linear-gradient(90deg, #ffa500, #d13056);
+    border-radius: 5px
+}
