@@ -1,4 +1,8 @@
 @font-face {
-    font-family: "Welcome Christmas Font";
-    src: url("../fonts/Welcome Christmas Font.ttf");
-   }
+    font-family: "Lobster";
+    src: url("../fonts/Lobster-Regular.ttf");
+}
+@font-face {
+    font-family: "SFProDisplay-Regular";
+    src: url("../fonts/SFProDisplay-Regular.ttf");
+}

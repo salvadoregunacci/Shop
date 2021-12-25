@@ -8,6 +8,7 @@
 @import "products_add_product_window";
 @import "comments";
 @import "bonus_of_registration";
+@import "facebook";
 
 body{
     padding: 0;
@@ -16,15 +17,24 @@ body{
     font-family: sans-serif;
     overflow-x: hidden;
 }
+.main::-webkit-scrollbar{
+    background-color: orange;
+    width: 10px;
+}
+.main::-webkit-scrollbar-thumb{
+    background: -webkit-linear-gradient(90deg, #ffa500, #d13056);
+    border-radius: 5px;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
 }
-::-webkit-scrollbar{
-    background-color: orange;
-    width: 10px;
+.hide{
+    display: none;
 }
-::-webkit-scrollbar-thumb{
-    background: -webkit-linear-gradient(90deg, #ffa500, #d13056);
-    border-radius: 5px
+.show{
+    display: block;
+}
+.show_d{
+    display: flex;
 }
