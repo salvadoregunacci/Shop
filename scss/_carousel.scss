@@ -1,0 +1,65 @@
+.carousel{
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.carousel-control-next{
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+.carousel-control-prev{
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: rgb(110, 110, 110);
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.carousel-inner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.carousel-item{
+    img{
+        height: 100%;
+    }
+}
+.carousel-indicators{
+    width: 150px;
+    background-color: $black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.info_item{
+    .container{
+        width: 980px;
+        text-align: justify;
+    }
+    &__header{
+        text-align: center;
+        font-size: 32px;
+    }
+    &__description{
+        margin-top: 30px;
+        .header{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .description{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    }
+}
+
