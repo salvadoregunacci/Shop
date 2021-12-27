@@ -18,11 +18,11 @@ body{
     font-family: sans-serif;
     overflow-x: hidden;
 }
-.main::-webkit-scrollbar{
+.main_HTML::-webkit-scrollbar{
     background-color: orange;
     width: 10px;
 }
-.main::-webkit-scrollbar-thumb{
+.main_HTML::-webkit-scrollbar-thumb{
     background: -webkit-linear-gradient(90deg, #ffa500, #d13056);
     border-radius: 5px;
 }

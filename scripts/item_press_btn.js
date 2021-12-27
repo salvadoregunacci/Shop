@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 dataItemObject.type = e.currentTarget.getAttribute("item_type");
                 localStorage.dataItem = JSON.stringify(dataItemObject);
             }
-            else{
-                console.log('no');
+            if(e.currentTarget.getAttribute("item_type") == "bolgarki"){
+                dataItemObject.id = e.currentTarget.getAttribute("item_id");
+                dataItemObject.type = e.currentTarget.getAttribute("item_type");
+                localStorage.dataItem = JSON.stringify(dataItemObject);
             }
         });
     });
