@@ -9,9 +9,8 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 50px;
-        margin-left: 360px;
+        transition: all 0.5s ease-out;
     }
-
     &__header {
         font-size: 16px;
         color: #fff;
@@ -25,9 +24,10 @@
         flex-direction: column;
         align-items: center;
         padding-top: 60px;
-        padding-left: 20px;
+        padding-left: 15px;
+        padding-right: 10px;
         margin: 0 auto;
-        min-width: 300px;
+        min-width: 260px;
         transition: 0.5s ease;
         background: linear-gradient(90deg, #202020,#363636,#202020);                                            
         border-right: 1px solid #FFA500;
