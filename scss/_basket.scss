@@ -45,7 +45,7 @@
     &__delete_icon{
         font-size: 22px;
         position: absolute;
-        right: 150px;
+        right: 120px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -88,6 +88,7 @@
         cursor: pointer;
         &:hover{
             background-color: rgb(231, 231, 231);
+            border-radius: 5px;
         }
     }
     &__line{
@@ -112,5 +113,73 @@
     }
     .basket__name_item{
         padding-left: 15px;
+    }
+    .basket__summa{
+        padding-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+        width: 100%;
+        text-align: right;
+        span{
+            font-weight: normal;
+        }
+        #summa{
+        margin-left: 10px;
+        color: rgb(243, 84, 84);
+        font-size: 24px;
+        }
+        .summa_after{
+            margin-right: 100px;
+        }
+    }
+    .basket__row_buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .basket__btn{
+        height: 40px;
+        width: 200px;
+        margin-right: 70px;
+        margin-left: 70px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .basket__continue_shop_btn{
+        background-color: #fff;
+        border: 2px solid rgb(51, 196, 51);
+        color: rgb(51, 196, 51);
+        transition: 0.3s ease;
+        &:hover{
+            background-color: rgb(51, 196, 51);
+            color: #fff;
+        }
+    }
+    .basket__complete_shop{
+        background-color: orange;
+        border: none;
+        color: #fff;
+        transition: 0.3s ease;
+        &:hover{
+            background-color: rgb(255, 94, 0);
+            color: #fff;
+        }
+    }
+    .orange__line{
+        background-color: orange;
+    }
+    .basket__visa_logo{
+        height: 30px;
+    }
+    .basket__count_item{
+        width: 35px;
+        height: 25px;
+        margin-left: 20px;
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 5px;
+        outline: none;
     }
 }
