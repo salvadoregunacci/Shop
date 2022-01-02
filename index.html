@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <title>ProInstrument</title>
 </head>
 
 <body class="main_HTML">
@@ -26,7 +26,16 @@
         <div class="container">
             <div class="nav_promo__wrapper">
                 <!-- <a href="#" class="nav_promo__item"><i class="fa fa-bars" aria-hidden="true"></i> Товари</a> -->
-                <div class="nav_promo__item"><i class="fa fa-bars" aria-hidden="true"></i> Товари</div>
+                <div class="nav_promo__item" id="dropmenu_triger"><i class="fa fa-bars dropmenu_lines" aria-hidden="true"></i> Товари
+                    <div class="dropmenu">
+                        <a href="#sale" class="dropmenu_links">Знижка -50%</a>
+                        <a href="#bolgarki" class="dropmenu_links">Болгарки</a>
+                        <a href="#dreli" class="dropmenu_links">Дрилі</a>
+                        <a href="#saws" class="dropmenu_links">Циркулярні пилки</a>
+                        <a href="#perforator" class="dropmenu_links">Перфоратори</a>
+                        <a href="#screwdriver" class="dropmenu_links">Шурупокрути</a>
+                    </div>
+                </div>
                 <a href="#" class="nav_promo__item"><i class="fa fa-user-circle" aria-hidden="true"></i> Мій кабінет</a>
                 <a href="#" class="nav_promo__item"><i class="fa fa-address-book-o" aria-hidden="true"></i> Контакти</a>
                 <a href="#" class="nav_promo__item"><i class="fa fa-info-circle" aria-hidden="true"></i> Допомога</a>
@@ -45,7 +54,7 @@
             <img src="img/promo/promo_main.png" alt="">
         </div>
         <div class="promo__info">
-            <h1 class="promo__header"><span>PROINSTRUMENT</span> - інтернет-магазин</h1>
+            <h2 class="promo__header"><span>PROINSTRUMENT</span> - інтернет-магазин</h2>
             <p class="promo__text">
                 Вітаємо! У нашому інтернет-магазині Ви зможете знайти електроінструменти по самим низьким цінам.
                 Якщо Ви давно мріяли замінити свій старий інструмент на новий, то зробити це з нами - ваш найкращий
@@ -622,7 +631,7 @@
             <!-- ==================================== -->
             <div id="saws"></div>
             <div class="products__title">
-                <img src="/img/products/table.png" style="width: 430px;" alt="table">
+                <img src="/img/products/table.png" style="width: 450px;" alt="table">
                 <div style="font-size: 24px;">Циркулярні пилки</div>
                 <div class="end_category_line"></div>
             </div>
@@ -1126,7 +1135,7 @@
             </div>
             <!-- COMMENT 3======================================== -->
             <div class="comments__main_wrapper">
-                <div class="comments__photo_user" style="min-width: 60px;">
+                <div class="comments__photo_user">
                     <img src="/img/comments/profile_3.jpg" alt="user_photo">
                 </div>
                 <div class="comments__wrapper">
@@ -1157,7 +1166,7 @@
             </div>
             <!-- COMMENT 4======================================== -->
             <div class="comments__main_wrapper">
-                <div class="comments__photo_user" style="min-width: 60px;">
+                <div class="comments__photo_user">
                     <img src="/img/comments/profile_4.jpg" alt="user_photo">
                 </div>
                 <div class="comments__wrapper">
@@ -1222,6 +1231,7 @@
 
     </footer>
 
+    <script src="/scripts/drop_menu.js"></script>
     <script src="/scripts/garbage.js"></script>
     <script src="/scripts/timer.js"></script>
     <script src="/scripts/navigation_item.js"></script>
