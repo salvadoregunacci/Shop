@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -24,11 +25,12 @@
     <nav class="nav_promo">
         <div class="container">
             <div class="nav_promo__wrapper">
-                <a href="#" class="nav_promo__item">Товари</a>
-                <a href="#" class="nav_promo__item">Доставка</a>
-                <a href="#" class="nav_promo__item">Акції</a>
-                <a href="#" class="nav_promo__item">Контакти</a>
-            </div>
+                <!-- <a href="#" class="nav_promo__item"><i class="fa fa-bars" aria-hidden="true"></i> Товари</a> -->
+                <div class="nav_promo__item"><i class="fa fa-bars" aria-hidden="true"></i> Товари</div>
+                <a href="#" class="nav_promo__item"><i class="fa fa-user-circle" aria-hidden="true"></i> Мій кабінет</a>
+                <a href="#" class="nav_promo__item"><i class="fa fa-address-book-o" aria-hidden="true"></i> Контакти</a>
+                <a href="#" class="nav_promo__item"><i class="fa fa-info-circle" aria-hidden="true"></i> Допомога</a>
+            </a>
             <div class="basket_h">
                 <img class="basket_h__image" src="img/header/basket.svg" alt="basket">
                 <div class="basket_h__iterator">0</div>
@@ -43,7 +45,7 @@
             <img src="img/promo/promo_main.png" alt="">
         </div>
         <div class="promo__info">
-            <h1 class="promo__header"><span>ProInstrument</span> - інтернет-магазин</h1>
+            <h1 class="promo__header"><span>PROINSTRUMENT</span> - інтернет-магазин</h1>
             <p class="promo__text">
                 Вітаємо! У нашому інтернет-магазині Ви зможете знайти електроінструменти по самим низьким цінам.
                 Якщо Ви давно мріяли замінити свій старий інструмент на новий, то зробити це з нами - ваш найкращий
@@ -147,6 +149,10 @@
                 <a href="#saws" class="products__navigation_item">Циркулярні пилки</a>
                 <a href="#perforator" class="products__navigation_item">Перфоратори</a>
                 <a href="#screwdriver" class="products__navigation_item">Шурупокрути</a>
+                <div class="basket_icon_sidebar">
+                    <img src="/img/basket/shopping_basket.png" alt="">
+                    <span id="sidebarBasketIterator">0</span>
+                </div>
             </div>
         </div>
 
@@ -178,7 +184,7 @@
                             <span class="old_price">1 573 <span class="ua">₴</span></span>
                             <span class="current_price">786 <span class="ua">₴</span></span>
                         </div>
-                        <button class="products__item_add_btn products__item_complete_btn">в кошик</button>
+                        <button class="products__item_add_btn">в кошик</button>
                     </div>
                 </div>
                 <!-- END ITEM -->
@@ -310,7 +316,7 @@
                     <div class="bonus__wrapper_right">
                         <p class="bonus__header">Зареєструйся через Facebook та отримай -200 грн на перше замовлення!
                         </p>
-                        <a id="registration_btn" href="facebook.html"><button
+                        <a target="_blank" id="registration_btn" href="facebook.html"><button
                                 class="bonus__registration_btn">Зареєструватися</button></a>
                         <img src="/img/bonus/bonus_decor.png" alt="" class="bonus__decoration_1">
                         <img src="/img/bonus/bonus_decor.png" alt="" class="bonus__decoration_2">

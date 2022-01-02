@@ -142,7 +142,7 @@
     }
     .basket__btn{
         height: 40px;
-        width: 200px;
+        width: 225px;
         margin-right: 70px;
         margin-left: 70px;
         border-radius: 5px;
@@ -181,5 +181,23 @@
         border: 1px solid rgb(219, 219, 219);
         border-radius: 5px;
         outline: none;
+    }
+    .basket__here_empty{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        height: 150px;
+        opacity: 0.3;
+        animation: empty_img 0.3s ease-out 1 forwards;
+    }
+}
+
+@keyframes empty_img {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 150px;
     }
 }

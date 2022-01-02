@@ -3,10 +3,22 @@ let windowOpen = false;
 let summa = 0;
 const productsLink = document.querySelectorAll('#add_item_link'),
       addProductWindow = document.querySelector('.products__add_product_window'),
-      basketWindow = document.querySelector('.basket');
+      basketWindow = document.querySelector('.basket'),
+      navBtnBasket = document.querySelector('.basket_h'),
+      navPromoIterator = document.querySelector('.basket_h__iterator'),
+      sidebarBasketIterator = document.querySelector('.basket_icon_sidebar');
 let $summa = document.querySelector('#summa');
 let $basketRowsItems;
 let $countItemInBasket;
+
+// клик по кнопке "КОШИК" в навигаторе вверху
+navBtnBasket.addEventListener("click", ()=>{
+    OpenBasketWindow();
+});
+// клик по кнопке "КОШИК" в сайдбаре
+sidebarBasketIterator.addEventListener("click", ()=>{
+    OpenBasketWindow();
+});
 
 productsLink.forEach((item, i) => {
     item.addEventListener("click", (e) => {
@@ -29,20 +41,52 @@ window.addEventListener("keydown", (e) => {
 let counter = 0;
 // Если добавили товар в корзину
 function PressAddToGarbageBtn(e, i) {
+
+    // если обратно нажал на "ДОБАВЛЕНО"
+    if(e.target.classList.contains("products__item_complete_btn")){
+      const item = e.target.parentElement;
+      item.style.boxShadow = "none";
+      DeleteItem(e.target);
+      for(let i=0; i< garbage.length; i++){
+        if(item.getAttribute("item_type") == garbage[i].querySelector(".products__item").getAttribute("item_type") && item.getAttribute("item_id") == garbage[i].querySelector(".products__item").getAttribute("item_id")){
+           garbage.splice(i,1);
+           counter--;
+           SelectNavIterator();
+        }
+      }
+      return;
+    }
     if (e.target.classList.contains("products__item_add_btn")) { // Если нажали именно на кнопку "в корзину"
         SelectItem(e.target);
-        productsLink[i].querySelector(".products__item").style.backgroundColor = "rgb(204, 253, 204)";
+        productsLink[i].querySelector(".products__item").style.boxShadow = "inset 1px 1px 15px rgba(0,128,0, 1)";
         OpenAddItemWindow();
         garbage[counter++] = productsLink[i];
+        SelectNavIterator();
     } else { // Если нажали на карточку товара
-        window.location.href = "/item.html";
+        window.open('/item.html');
+    }
+}
+function SelectNavIterator(){
+    sidebarBasketIterator.querySelector("#sidebarBasketIterator").textContent = garbage.length;
+    navPromoIterator.textContent = garbage.length;
+    navPromoIterator.style.backgroundColor = "green";
+    sidebarBasketIterator.querySelector("#sidebarBasketIterator").style.backgroundColor = "green";
+    if(garbage.length < 1){
+        navPromoIterator.style.backgroundColor = "rgb(207, 71, 71)";
+        sidebarBasketIterator.querySelector("#sidebarBasketIterator").style.backgroundColor = "rgb(211, 39, 39)";
     }
 }
 function SelectItem(e){
-    e.style.backgroundColor = "green";
-    e.style.color = "#fff";
+    e.classList.remove("products__item_add_btn");
+    e.classList.add("products__item_complete_btn");
     e.textContent = "✔ Додано"
 }
+function DeleteItem(e){
+    e.classList.remove("products__item_complete_btn");
+    e.classList.add("products__item_add_btn");
+    e.textContent = "в кошик"
+}
+
 
 function OpenAddItemWindow() {
     windowOpen = true;
@@ -88,14 +132,24 @@ function SetItemsInBasket(i) {
             <div class="basket__line"></div>
             `
 }
+function SetEmptyImgBasket(){
+    $basketItemsWrapper.innerHTML += `
+        <img src="/img/basket/robot_icon_t.png" alt="robot" class="basket__here_empty">
+    `
+}
 
 function CloseBasketWindow() {
+    document.querySelector('body').style.overflowY = "scroll";
     CloseAddItemWindow();
     basketWindow.classList.remove("show_d");
 }
 
 function OpenBasketWindow() {
+    document.querySelector('body').style.overflowY = "hidden";
     ClearBasketWindow();
+    if(garbage.length <= 0){
+        SetEmptyImgBasket();
+    }
     basketWindow.classList.add("show_d");
     if (garbage.length != 0) {
         for (let i = 0; i < garbage.length; i++) {
@@ -111,7 +165,7 @@ function OpenBasketWindow() {
     $basketRowsItems = $basketItemsWrapper.querySelectorAll(".basket__row_items");
 
     // навели мышку на товар (добавляем иконку удаление товара)
-    $basketRowsItems.forEach((item) => {
+    $basketRowsItems.forEach((item,i) => {
         item.addEventListener("mouseenter", () => {
             let deleteIcon = document.createElement("div");
             deleteIcon.classList.add("basket__delete_icon");
@@ -119,9 +173,27 @@ function OpenBasketWindow() {
             item.append(deleteIcon);
             deleteIcon.addEventListener("click", () => {
                 deleteIcon.parentElement.setAttribute("data-delete", "");
+                let deleteIndex;
+                $basketRowsItems = $basketItemsWrapper.querySelectorAll(".basket__row_items");
+                $basketRowsItems.forEach((item,x) =>{
+                    if(item.hasAttribute("data-delete")) {
+                        deleteIndex = x;
+                    }
+                });
+                productsLink.forEach((linkItem)=>{
+                    // возвращаем карточку в исходный вид, если юзер удалил товар в корзине
+                    if(linkItem.querySelector(".products__item").getAttribute("item_type") == garbage[deleteIndex].querySelector(".products__item").getAttribute("item_type") && linkItem.querySelector(".products__item").getAttribute("item_id") == garbage[deleteIndex].querySelector(".products__item").getAttribute("item_id"))
+                    {
+                        linkItem.querySelector(".products__item").style.boxShadow = "none";
+                        DeleteItem(linkItem.querySelector(".products__item_complete_btn"));
+                    }
+                });
                 DeleteItemInBasket();
                 deleteIcon.parentElement.nextSibling.nextSibling.remove();
                 deleteIcon.parentElement.remove();
+                if(garbage.length <= 0){
+                    SetEmptyImgBasket();
+                }
             });
         });
     });
@@ -159,6 +231,7 @@ function DeleteItemInBasket() {
         }
     }
     garbage.splice(indexDelete, 1);
+    SelectNavIterator();
     counter--;
     Summa();
 }

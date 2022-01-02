@@ -15,7 +15,7 @@
     &__wrapper{
         display: flex;
         height: 100%;
-        width: 500px;
+        width: 940px;
         justify-content: space-between;
         align-items: center;
     }
@@ -23,6 +23,7 @@
         color: #fff;
         font-size: 18px;
         text-decoration: none;
+        cursor: pointer;
         &:after{
             content: "";
             display: block;
@@ -48,14 +49,21 @@
         align-items: center;
         border: 1px solid $black;
         border-radius: 15px;
-        padding: 10px 15px 10px 15px;
+        padding: 10px 14px 10px 14px;
         width: 180px;
         height: 30px;
+        cursor: pointer;
+        box-shadow: inset 2px 2px 10px rgba(103, 236, 51, 0);
+        transition: 0.2s ease;
+        &:hover{
+            box-shadow: inset 2px 2px 10px rgb(224, 236, 51);
+            padding: 13px 15px 13px 15px;
+        }
         &__image{
             height: 35px;
         }
         &__iterator{
-            background-color: rgb(236, 104, 104);
+            background-color: rgb(207, 71, 71);
             border-radius: 100%;
             height: 20px;
             width: 20px;
@@ -77,5 +85,47 @@
             border-left: 1px solid $black;
             text-transform: uppercase;
         }
+    }
+}
+.basket_icon_sidebar{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 0px solid rgba(242,122,3, 0);
+    border-radius: 100%;
+    transition: 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        padding: 6px;
+        border: 1px solid rgba(242,122,3,1);
+    }
+    img{
+        height: 50px;
+        transition: 0.3s ease-out;
+        &:hover{
+            height: 53px;
+        }
+    }
+    #sidebarBasketIterator{
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        height: 25px;
+        width: 25px;
+        padding: 2px;
+        background-color: rgb(211, 39, 39);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 18px;
+        transition: 0.3s ease-out;
     }
 }

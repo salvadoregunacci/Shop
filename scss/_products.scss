@@ -1,7 +1,7 @@
 .products {
     display: flex;
     background-color: $black;
-    height: 9000px; // 5000 - без прокрутки
+    height: 8700px; // 5000 - без прокрутки
     .container {
         width: 1200px;
         background-color: #fff;
@@ -12,7 +12,7 @@
         transition: all 0.5s ease-out;
     }
     &__header {
-        font-size: 16px;
+        font-size: 13px;
         color: #fff;
         margin-bottom: 30px;
     }
@@ -29,7 +29,7 @@
         margin: 0 auto;
         min-width: 260px;
         transition: 0.5s ease;
-        background: linear-gradient(90deg, #202020,#363636,#202020);                                            
+        background: linear-gradient(90deg, #202020,#363636,#202020);
         border-right: 1px solid #FFA500;
         z-index: 10;
         position: fixed;
@@ -71,7 +71,7 @@
             font-size: 30px;
             transform: translateY(-50%);
             text-shadow: 2px 1px 15px rgba(0,0,0, .7);
-        } 
+        }
         .end_category_line{
             height: 2px;
             width: 100%;
@@ -89,5 +89,5 @@
             text-decoration: none;
             color: $black;
         }
-    } 
+    }
 }
