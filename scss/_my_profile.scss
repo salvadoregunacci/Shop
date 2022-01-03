@@ -1,0 +1,114 @@
+.my_profile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.6);
+    z-index: 15;
+    display: none;
+    &__main_wrapper{
+        position: relative;
+        height: 80%;
+        width: 1200px;
+        background: linear-gradient(155deg, #ffa500, #d13056);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 10px rgba(0,0,0, 0.5);
+        overflow: hidden;
+    }
+    .my_profile__abstract_img{
+        width: 1200px;
+        position: absolute;
+        z-index: 0;
+        transform: translateY(240px);
+    }
+    &__header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: $black;
+    }
+    &__title{
+        font-size: 26px;
+        margin-left: 30px;
+        margin-top: 15px;
+        padding: 5px 20px;
+        background-color: rgba(223,86,58, 0.4);
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0,0,0, 0.2);
+    }
+    &__close_btn{
+        margin-right: 30px;
+        margin-top: 15px;
+        font-size: 26px;
+        background-color: rgb(255,167,38);
+        padding: 5px 10px;
+        border-radius: 6px;
+        box-shadow: 2px 2px 10px rgba(0,0,0, 0.2);
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover{
+            background-color: rgb(245, 156, 23);
+        }
+    }
+    &__wrapper{
+        position: relative;
+        margin-top: 70px;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1;
+        img{
+            z-index: 1;
+            height: 400px;
+            filter: drop-shadow(1px 1px 10px rgba(0,0,0, 0.2));
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__info{
+        font-size: 28px;
+        color: rgb(228, 226, 226);
+        text-shadow: 2px 2px 5px rgb(177, 206, 16);
+        span{
+            display: block;
+            font-size: 20px;
+            text-align: right;
+            margin-top: 10px;
+        }
+    }
+    a{
+        align-self: end;
+    }
+    &__create_btn{
+        margin-top: 60px;
+        box-sizing: border-box;
+
+        height: 65px;
+        width: 300px;
+        background-color: #9814b3;
+        border: 1px solid rgba(230, 12, 157, 0.932);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        box-shadow: inset 3px 2px 20px rgba(230, 12, 157, 0.932);
+        z-index: 1;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            width: 310px;
+            background-color: #ab19c9;
+            color: rgb(229, 233, 24);
+        }
+    }
+}

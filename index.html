@@ -12,7 +12,7 @@
     <title>ProInstrument</title>
 </head>
 
-<body class="main_HTML">
+<body class="main_HTML" id="mainPage">
     <!--HEADER -->
     <header>
         <div class="header__line"></div>
@@ -21,6 +21,26 @@
         </div>
         <div class="header__line"></div>
     </header>
+    <div class="my_profile">
+        <div class="my_profile__main_wrapper">
+            <div class="my_profile__header">
+                <div class="my_profile__title">· Мій профіль ·</div>
+                <div class="my_profile__close_btn">✖</div>
+            </div>
+            <div class="my_profile__wrapper">
+                <img src="/img/my_profile/user.png" alt="profile">
+                <div class="my_profile__text">
+                    <div class="my_profile__info">На жаль, Ви ще не створили свій профіль <br>
+                        <span> та це ніколи не пізно зробити :) </span>
+                    </div>
+                    <a href="facebook.html" target="_blank">
+                        <button class="my_profile__create_btn">Створити</button>
+                    </a>
+                </div>
+            </div>
+            <img src="/img/my_profile/abstract.png" alt="abstract" class="my_profile__abstract_img">
+        </div>
+    </div>
     <!--NAVIGATION PROMO -->
     <nav class="nav_promo">
         <div class="container">
@@ -36,7 +56,7 @@
                         <a href="#screwdriver" class="dropmenu_links">Шурупокрути</a>
                     </div>
                 </div>
-                <a href="#" class="nav_promo__item"><i class="fa fa-user-circle" aria-hidden="true"></i> Мій кабінет</a>
+                <div class="nav_promo__item" id="my_profile_trigger"><i class="fa fa-user-circle" aria-hidden="true"></i> Мій кабінет</div>
                 <a href="#" class="nav_promo__item"><i class="fa fa-address-book-o" aria-hidden="true"></i> Контакти</a>
                 <a href="#" class="nav_promo__item"><i class="fa fa-info-circle" aria-hidden="true"></i> Допомога</a>
             </a>
@@ -162,6 +182,7 @@
                     <img src="/img/basket/shopping_basket.png" alt="">
                     <span id="sidebarBasketIterator">0</span>
                 </div>
+                <a href="#mainPage" class="products__navigation_go_home_btn">На головну</a>
             </div>
         </div>
 
@@ -1196,8 +1217,7 @@
             <div class="user__comments_wrapper">
                 <div class="comments__horizontal_line"></div>
                 <div class="wrapper_3">
-                    <textarea class="comments__user_input" cols="30" rows="4"
-                        placeholder="Написати відгук..."></textarea>
+                    <textarea class="comments__user_input" cols="30" rows="4" placeholder="Написати відгук..."></textarea>
                     <div class="wrapper_4">
                         <span>Як Ви оціните наш сайт?</span>
                         <div class="rating-area">
@@ -1215,6 +1235,10 @@
                         <button class="add_user_comments_btn">Опублікувати</button>
                     </div>
                 </div>
+                <div class="comments__no_text">
+                    <div class="no__text_icon"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
+                    <div class="no__text_info">Ви нічого не написали</div>
+                </div>
             </div>
         </div> <!-- container__comments -->
         <div class="comments__modal">
@@ -1231,6 +1255,8 @@
 
     </footer>
 
+    <script src="/scripts/my_profile.js"></script>
+    <script src="/scripts/comments.js"></script>
     <script src="/scripts/drop_menu.js"></script>
     <script src="/scripts/garbage.js"></script>
     <script src="/scripts/timer.js"></script>

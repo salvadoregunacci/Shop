@@ -2,23 +2,24 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 620px;      
-    position: relative;            
-    background-color:   #ffffff;            
-    z-index: -2;                  
+    height: 620px;
+    position: relative;
+    background-color:   #ffffff;
+    z-index: -2;
     &__bg_gradient{
         position: absolute;
-        background: linear-gradient(90deg, #c52020,#ff751a);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                       
+        background: linear-gradient(90deg, #c52020,#ff751a);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         height: 1600px;
-        width: 900px;   
+        width: 900px;
         transform: rotate(-25deg);
-        z-index: -1;  
-        left: -230px;     
-        border-right: 3px solid #f16b18;    
-        box-shadow: inset 2px 2px 20px black;                               
+        z-index: -1;
+        left: -230px;
+        border-right: 3px solid #f16b18;
+        box-shadow: inset 2px 2px 20px black;
     }
     &__info{
         max-width: 700px;
+        transform: translateX(-50px);
     }
     &__image{
         height: 300px;
