@@ -21,6 +21,20 @@
         </div>
         <div class="header__line"></div>
     </header>
+    <div class="contacts">
+        <div class="contacts__wrapper">
+            <div class="contacts__header">
+                <div class="contacts__title">· Контакти ·</div>
+                <div class="contacts__close_btn">✖</div>
+            </div>
+            <div class="contacts__info">
+                <span class="contacts__email_title">Наш email:</span>
+                <a href="mailto:proinstrument.info@gmail.com" class="contacts__email">proinstrument.info@gmail.com</a>
+                <span class="contacts__facebook_title">Наш менеджер:</span>
+                <a href="https://www.facebook.com/profile.php?id=100076712532967" target="_blank" class="contacts__facebook">https://www.facebook.com/profile.php?id=100076712532967</a>
+            </div>
+        </div>
+    </div>
     <div class="my_profile">
         <div class="my_profile__main_wrapper">
             <div class="my_profile__header">
@@ -30,7 +44,7 @@
             <div class="my_profile__wrapper">
                 <img src="/img/my_profile/user.png" alt="profile">
                 <div class="my_profile__text">
-                    <div class="my_profile__info">На жаль, Ви ще не створили свій профіль <br>
+                    <div class="my_profile__info">Ви ще не створили свій профіль <br>
                         <span> та це ніколи не пізно зробити :) </span>
                     </div>
                     <a href="facebook.html" target="_blank">
@@ -57,8 +71,8 @@
                     </div>
                 </div>
                 <div class="nav_promo__item" id="my_profile_trigger"><i class="fa fa-user-circle" aria-hidden="true"></i> Мій кабінет</div>
-                <a href="#" class="nav_promo__item"><i class="fa fa-address-book-o" aria-hidden="true"></i> Контакти</a>
-                <a href="#" class="nav_promo__item"><i class="fa fa-info-circle" aria-hidden="true"></i> Допомога</a>
+                <div id="contacts_trigger" class="nav_promo__item"><i class="fa fa-address-book-o" aria-hidden="true"></i> Контакти</div>
+                <a href="support.html" target="_blank" class="nav_promo__item"><i class="fa fa-info-circle" aria-hidden="true"></i> Довідка</a>
             </a>
             <div class="basket_h">
                 <img class="basket_h__image" src="img/header/basket.svg" alt="basket">
@@ -1255,6 +1269,7 @@
 
     </footer>
 
+    <script src="/scripts/contacts.js"></script>
     <script src="/scripts/my_profile.js"></script>
     <script src="/scripts/comments.js"></script>
     <script src="/scripts/drop_menu.js"></script>
