@@ -16,6 +16,9 @@
 @import "support";
 @import "create_account_modal";
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     padding: 0;
     margin: 0;
